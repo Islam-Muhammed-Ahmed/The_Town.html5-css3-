@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* body styling */
+
+body {
+    background: #fff;
+    color: rgb(75, 74, 74);
+    text-transform: capitalize;
+}
+
+
+/* nav bar styling */
+
+nav {
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 1;
+}
+
+nav a {
+    color: #fff;
+    line-height: 100px;
+    font-size: 22px;
+    margin: 10px;
+    position: relative;
+}
+
+
+/* media query for nav bar */
+
+@media (max-width:991px) {
+    nav .left a,
+    .right ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* nav bar list styling using pesude elements */
+
+nav ul {
+    display: flex;
+}
+
+nav a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #3496d8;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear;
+}
+
+nav a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav a:hover {
+    color: #3496d8;
+}
+
+
+/* end of nav */
+
+
+/* our main styling */
+
+main {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main .text {
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+/* end of main */
+
+
+/* styling first section */
+
+.sec-1 {
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.sec-1 img {
+    width: 450px;
+    height: 300px;
+    margin: 80px 80px 80px 150px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+
+/* media query for first section */
+
+@media(max-width:991px) {
+    .sec-1 img {
+        width: 450px;
+        height: 300px;
+        margin: 80px 80px 80px 50px;
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+/* fisrt section texts */
+
+.sec-1 .text2 h1 {
+    color: #3496d8;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.sec-1 .text2 span {
+    opacity: 0.7;
+}
+
+.sec-1 .text2 span a {
+    color: #3496d8;
+}
+
+.sec-1 .text2 span a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.sec-1 .text2 button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    border-radius: 30px;
+    background: #3496d8;
+    outline: none;
+    color: #fff;
+    border: none;
+    width: 45%;
+}
+
+.sec-1 .text2 button:hover {
+    background: #73c1f6;
+    color: #fff;
+}
+
+
+/* another media query */
+
+@media(max-width:991px) {
+    .sec-1 {
+        max-width: 100%;
+        max-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* end of sec-1 */
+
+
+/* section 2 styling */
+
+.sec-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.sec-2 h1 {
+    margin: 15px;
+    font-size: 28px;
+    word-spacing: 5px;
+}
+
+.sec-2 h4 {
+    margin: 15px;
+    font-size: 0.9rem;
+    word-spacing: 5px;
+    color: #3496d8;
+}
+
+.sec-2 span {
+    line-height: 30px;
+}
+
+
+/* media query for section2 */
+
+@media(max-width:991px) {
+    .sec-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+        flex-direction: column;
+        margin-top: 234px;
+        margin-left: 25px;
+    }
+}
+
+
+/* end of sec-2 */
+
+
+/* section3 styling */
+
+.sec-3 {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.sec-3 .text-3 h1 {
+    text-align: center;
+    color: #3496d8;
+    font-size: 45px;
+    margin: 46px 0 46px 0;
+    font-weight: 100;
+    margin-top: 150px;
+}
+
+.sec-3 .text-3 p {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    opacity: 0.8;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 40px 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.container .img-box {
+    width: 80%;
+}
+
+
+/* section3 media query */
+
+@media(max-width: 991px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 71px
+    }
+    .img-box img {
+        margin-bottom: 20px;
+    }
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+}
+
+.container .box .img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .box .img-box img {
+    width: 300px;
+    max-height: 400px;
+    transition: transform 2s ease;
+}
+
+.container .box:hover .img-box img {
+    transform: scale(1.2);
+    border-bottom: 8px solid #3496d8;
+}
+
+.container .box .details {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    transform: scaleY(0);
+    transition: transform 0.5s ease;
+}
+
+.container .box:hover .details {
+    transform: scaleY(1);
+}
+
+.container .box .details .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+
+/* end of sec-3 & figure */
+
+
+/* fooooter styling */
+
+footer {
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-size: cover;
+    background-image: url(imgs/bg/the-town-bg-02.jpg);
+    max-width: auto;
+}
+
+footer img {
+    max-width: auto;
+}
+
+.contain-text {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.contain-text .head {
+    position: relative;
+    left: 0;
+    border-bottom: 2px solid #fff;
+    top: -240px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.contain-text .head::before {
+    position: absolute;
+    content: "";
+    color: #fff;
+    width: 30%;
+    height: 22%;
+    background-color: #fff;
+    top: 38px;
+}
+
+.contain-text .paragraph-2 {
+    color: #fff;
+    margin-top: -220px;
+}
+
+footer .info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 60%;
+    line-height: 50px;
+    top: 300px;
+    color: #fff;
+}
+
+footer .info .email-sub input[type="email"] {
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    margin: 15px;
+    border: 1px solid #fff;
+    width: 280px;
+    font-size: 1rem;
+    border-radius: 3px;
+    color: #fff;
+}
+
+ ::placeholder {
+    color: #fff;
+    opacity: 0.6;
+}
+
+footer .info .email-sub button {
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    margin: 10px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.2;
+    width: 110px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+footer .info .email-sub button:hover {
+    background: rgb(207, 207, 207);
+}
+
+footer .copyright {
+    position: absolute;
+    bottom: 15px;
+    color: #fff;
+}
+
+footer .copyright a {
+    color: #fff;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+footer .copyright a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #3496d8;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear;
+}
+
+footer .copyright a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer .copyright a:hover {
+    color: #3496d8;
+}
+
+
+/* footer media quey */
+
+@media(max-width:991px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: .9rem;
+    }
+    .contain-text .head::before {
+        top: 33px;
+    }
+    footer .info {
+        flex-direction: column;
+        line-height: 10px;
+        top: 400px;
+    }
+    .email-sub {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: center;
+    }
+}
+
+
+/* end of fooooter */
