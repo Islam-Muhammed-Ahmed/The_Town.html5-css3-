@@ -484,7 +484,7 @@ footer .copyright a:hover {
     footer {
         display: flex;
         flex-direction: column;
-        font-size: .9rem;
+        font-size: 0.9rem;
     }
     .contain-text .head::before {
         top: 33px;
